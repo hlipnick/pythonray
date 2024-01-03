@@ -3,7 +3,7 @@ from inspect import getframeinfo, stack
 
 class Payload:
 
-    VERSION = "0.15"
+    VERSION = "0.1.6"
 
     @staticmethod
     def get_origin():
