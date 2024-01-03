@@ -66,6 +66,8 @@ class Ray:
     # Methods
     def html(self, html):
         return self.send(HtmlPayload(html))
+    def image(self, image_path):
+        return self.send(ImagePayload(image_path))
 
     ### Utilities
     # Clear all

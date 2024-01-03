@@ -30,4 +30,11 @@ def test_ray():
     time.sleep(1)
     ray().confetti()
 
-test_ray()
+def main():
+    # test_ray()
+    image_path = "https://charts-static.billboard.com/img/1958/12/ray-charles-lfr-344x344.jpg"
+    ray().clear().html("<h3>Mr. Ray Charles!</h3>").blue()
+    ray().image(image_path).green().confetti()
+
+if __name__ == "__main__":
+    main()

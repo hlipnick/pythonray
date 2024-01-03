@@ -83,6 +83,21 @@ class HtmlPayload(Payload):
         }
         super().__init__(type="custom", content=self.content)
 
+
+class ImagePayload(Payload):
+
+    def get_path(self):
+        return self.image
+
+    def __init__(self, image):
+        self.image = image
+        img_tag_string = "<img src=\"" + self.get_path() + "\" alt=\"\" />"
+        self.content = {
+            'content': img_tag_string,
+            'label': 'Image',
+        }
+        super().__init__(type="custom", content=self.content)
+
 class BooleanPayload(Payload):
     def __init__(self, boolean):
         super().__init__(type="custom", content={
