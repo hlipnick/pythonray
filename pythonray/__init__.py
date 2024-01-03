@@ -1,1 +1,2 @@
-from hello import say_hello
+from pythonray.hello import *
+from pythonray.ray import *
